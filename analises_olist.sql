@@ -1,6 +1,7 @@
 -- ============================================================
 -- TECH CHALLENGE - FASE 01 - OLIST
 -- ============================================================
+-- Fonte dos dados: Brazilian E-Commerce Public Dataset by Olist (Kaggle)
 
 -- ============================================================
 -- CHECAGEM DE QUALIDADE DOS DADOS
@@ -8,7 +9,6 @@
 -- ============================================================
 
 -- 0.1 - Quantos pedidos estão sem data de aprovação ou sem data de entrega
--- (esperado: pedidos cancelados/não concluídos não têm essas datas preenchidas)
 select count(*) filter (where order_approved_at is null) as sem_aprovacao,
        count(*) filter (where order_delivered_customer_date is null) as sem_entrega,
        count(*) as total
@@ -28,7 +28,6 @@ select distinct order_status from orders;
 --            processing, delivered, canceled
 
 -- 0.4 - Criar uma VIEW com só os pedidos "limpos" (entregues e com datas completas)
--- Isso evita repetir esse filtro em toda query daqui pra frente
 create view orders_delivered as
 select *
 from orders
@@ -68,7 +67,6 @@ order by count(*) desc;
 -- ============================================================
 
 -- 1.1 - Evolução mensal de pedidos, receita e ticket médio
--- (::timestamp necessário porque a coluna veio como texto na importação)
 select 
     date_trunc('month', o.order_purchase_timestamp::timestamp) as mes,
     count(distinct o.order_id) as total_pedidos,
@@ -83,7 +81,6 @@ order by mes;
 -- crescimento consistente a partir de jan/2017
 
 -- 1.2 - Receita por categoria de produto (top 15)
--- coalesce: usa o nome traduzido em inglês, senão o original, senão "sem_categoria"
 select 
     coalesce(ct.product_category_name_english, p.product_category_name, 'sem_categoria') as categoria,
     count(distinct o.order_id) as total_pedidos,
@@ -139,7 +136,6 @@ join order_items oi on s.seller_id = oi.seller_id
 group by s.seller_state
 order by total_sellers desc;
 -- Resultado: SP tem 1.849 sellers, mais que todos os outros estados somados.
--- Confirma que o frete alto no Norte é reflexo da ausência de sellers locais.
 
 
 -- ============================================================
@@ -148,7 +144,6 @@ order by total_sellers desc;
 -- ============================================================
 
 -- 2.1 - Lead time (tempo entre compra e entrega): média, mínimo e máximo em dias
--- extract(epoch from ...) / 86400 converte a diferença de timestamps para dias
 select 
     round(avg(extract(epoch from (order_delivered_customer_date::timestamp - order_purchase_timestamp::timestamp)) / 86400)::numeric, 1) as lead_time_medio_dias,
     round(min(extract(epoch from (order_delivered_customer_date::timestamp - order_purchase_timestamp::timestamp)) / 86400)::numeric, 1) as lead_time_min,
@@ -198,7 +193,6 @@ from orders_delivered o
 join order_reviews r on o.order_id = r.order_id
 group by situacao_entrega;
 -- Resultado: atrasado = nota 2,57 | no prazo = nota 4,29 (diferença de 1,72 pontos)
--- Esse é o fator com maior impacto na satisfação de todo o estudo.
 
 -- 3.2 - Nota média por categoria de produto
 -- having count(*) >= 100 evita que categorias com poucas avaliações distorçam o ranking
@@ -263,7 +257,6 @@ order by parcelas;
 -- até R$415,09 em 10x). Volume cai muito acima de 10 parcelas.
 
 -- 4.2 - RFM simplificado: top 20 clientes por valor total gasto
--- usa customer_unique_id porque customer_id muda a cada pedido na Olist
 select 
     c.customer_unique_id,
     count(distinct o.order_id) as frequencia,
@@ -299,7 +292,6 @@ group by tipo_cliente;
 -- ============================================================
 
 -- 5.1 - Estados com alta demanda mas poucos (ou nenhum) sellers locais
--- pedidos_por_seller NULL = demanda existe mas não há nenhum seller no estado
 select 
     c.customer_state as uf,
     count(distinct o.order_id) as pedidos_clientes,
@@ -320,7 +312,6 @@ limit 15;
 -- de expansão, pois já é demanda comprovada).
 
 -- 5.2 - Categorias frequentemente compradas juntas no mesmo pedido (cross-sell)
--- least/greatest evita contar o mesmo par de categorias duas vezes (A-B e B-A)
 select 
     least(ct1.product_category_name_english, ct2.product_category_name_english) as categoria_a,
     greatest(ct1.product_category_name_english, ct2.product_category_name_english) as categoria_b,
