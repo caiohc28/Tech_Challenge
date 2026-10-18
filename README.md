@@ -111,6 +111,15 @@ Arquivos utilizados na trilha de Crescimento e Receita:
 - `olist_customers_dataset.csv`
 - `product_category_name_translation.csv`
 
+Arquivos utilizados na trilha de Satisfação do Cliente:
+
+- `olist_orders_dataset.csv`
+- `olist_order_items_dataset.csv`
+- `olist_order_reviews_dataset.csv`
+- `olist_products_dataset.csv`
+- `product_category_name_translation.csv`
+
+
 ## Entregáveis
 
 - Repositório GitHub com os códigos utilizados.
