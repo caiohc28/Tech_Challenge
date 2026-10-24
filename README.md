@@ -92,9 +92,17 @@ Análise das avaliações dos clientes e dos possíveis fatores associados à sa
 
 **Responsável:** Jhonny Bendheim
 
-Identificação de oportunidades de negócio e elaboração de recomendações estratégicas com base nos resultados das análises.
+Identificação de oportunidades de negócio e elaboração de recomendações estratégicas com base nos resultados das análises, cruzando frete, pricing/cross-sell e desempenho de sellers.
 
-**Status:** Em desenvolvimento.
+Principais resultados documentados:
+- Frete crítico concentrado em rotas específicas: São Paulo → Maranhão (maior volume, ~492 pedidos) com frete em 61% do valor do produto e 22 dias de lead time; São Paulo → Roraima, Minas Gerais → Sergipe/Pará e São Paulo → Amazonas com frete entre 53% e 57% e 25 a 30 dias.
+- `furniture_decor` e `office_furniture` combinam ticket médio alto com cross-sell orgânico relevante (cerca de 4 em cada 10 pedidos com múltiplos itens); `signaling_and_security` tem a maior taxa de cross-sell entre as categorias analisadas (48%).
+- São Paulo concentra os maiores combos categoria-receita do país (`bed_bath_table`, `health_beauty`, `watches_gifts`, `sports_leisure`).
+- Entre os sellers com volume relevante (20+ pedidos), 135 têm nota de avaliação acima da mediana mas entrega mais lenta que a mediana — grupo "Potencial travado por logística", de maior alavancagem de curto prazo.
+
+Notebook: `notebooks/Oportunidades_e_Recomendacao.ipynb`
+
+**Status:** Concluído.
 
 ## Como executar os notebooks
 
@@ -119,6 +127,16 @@ Arquivos utilizados na trilha de Satisfação do Cliente:
 - `olist_products_dataset.csv`
 - `product_category_name_translation.csv`
 
+Arquivos utilizados na trilha de Oportunidades e Recomendação:
+
+- `olist_orders_dataset.csv`
+- `olist_order_items_dataset.csv`
+- `olist_customers_dataset.csv`
+- `olist_sellers_dataset.csv`
+- `olist_products_dataset.csv`
+- `olist_order_reviews_dataset.csv`
+- `product_category_name_translation.csv`
+
 
 ## Entregáveis
 
@@ -135,7 +153,7 @@ Arquivos utilizados na trilha de Satisfação do Cliente:
 | Logística e SLA | Em desenvolvimento |
 | Comportamento e Pagamentos | Em desenvolvimento |
 | Satisfação do Cliente | Em desenvolvimento |
-| Oportunidades e Recomendação | Em desenvolvimento |
+| Oportunidades e Recomendação | Concluído |
 | Relatório final | Em desenvolvimento |
 | Apresentação final | Em desenvolvimento |
 | Vídeo executivo | Em desenvolvimento |
