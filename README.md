@@ -40,8 +40,8 @@ Principais tabelas:
 |---|---|---|
 | Rodolfo Ariel | RM377343 | Crescimento e Receita |
 | Caio Carnetti | RM378267 | Logística e SLA |
-| Hélvia | RM378537 | Comportamento e Pagamentos |
-| Ana Carolina | RM378192 | Satisfação do Cliente |
+| Hélvia de Oliveira | RM378537 | Comportamento e Pagamentos |
+| Ana Carolina Queiroz | RM378192 | Satisfação do Cliente |
 | Jhonny Bendheim | RM378469 | Oportunidades e Recomendação |
 
 ## Trilhas de análise
@@ -74,7 +74,7 @@ Análise dos prazos de entrega, atrasos, cumprimento do SLA e relação entre de
 
 ### 3. Comportamento e Pagamentos
 
-**Responsável:** Hélvia
+**Responsável:** Hélvia de Oliveira
 
 Análise dos meios de pagamento, parcelamento, comportamento de compra e recompra dos clientes.
 
@@ -91,11 +91,22 @@ Notebook: `notebooks/Olist_Crescimento_Receita.ipynb`
 
 ### 4. Satisfação do Cliente
 
-**Responsável:** Ana Carolina
+**Responsável:** Ana Carolina Queiroz
+### 4. Satisfação do Cliente
 
-Análise das avaliações dos clientes e dos possíveis fatores associados à satisfação.
+**Responsável:** Ana Carolina Queiroz
 
-**Status:** Em desenvolvimento.
+Análise dos fatores que mais influenciam a nota de avaliação dos clientes: distribuição das notas, atraso na entrega, categoria do produto, comentários e tempo de aprovação do pedido.
+
+Principais resultados documentados:
+- As notas 4 e 5 somam cerca de 77% das avaliações; as notas 1 e 2 representam 14,7%, e a nota 1 sozinha pesa 11,5%.
+- Pedidos entregues com atraso recebem nota média de 2,57, contra 4,29 dos entregues no prazo: diferença de 1,72 ponto (cerca de 40% a menos), com atrasos em apenas ~8% das avaliações.
+- A nota média por categoria varia de 3,52 `office_furniture` a 4,51 `books_general_interest`, diferença de 0,99 ponto, menor que a causada pelo atraso.
+- Clientes que escrevem comentário dão nota média de 3,67, contra 4,38 de quem não comenta; 76,5% das avaliações com nota 1 trazem comentário.
+- O tempo de aprovação do pedido praticamente não altera a nota (diferença de 0,06 ponto entre as faixas), e cerca de 64% dos pedidos são aprovados em até 1 hora.
+- O atraso na entrega é o fator mais associado à queda da satisfação entre os analisados.
+
+Notebook: `notebooks/Olist_Satisfacao_Cliente.ipynb`
 
 ### 5. Oportunidades e Recomendação
 
@@ -161,7 +172,7 @@ Arquivos utilizados na trilha de Oportunidades e Recomendação:
 | Crescimento e Receita | Concluído |
 | Logística e SLA | Em desenvolvimento |
 | Comportamento e Pagamentos | Em desenvolvimento |
-| Satisfação do Cliente | Em desenvolvimento |
+| Satisfação do Cliente | Concluído |
 | Oportunidades e Recomendação | Concluído |
 | Relatório final | Em desenvolvimento |
 | Apresentação final | Em desenvolvimento |
