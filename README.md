@@ -103,7 +103,7 @@ Principais resultados documentados:
 - O tempo de aprovação do pedido praticamente não altera a nota (diferença de 0,06 ponto entre as faixas), e cerca de 64% dos pedidos são aprovados em até 1 hora.
 - O atraso na entrega é o fator mais associado à queda da satisfação entre os analisados.
 
-Notebook: `notebooks/Olist_Satisfacao_Cliente.ipynb`
+Notebook: `notebooks/Satisfacao_do_Cliente.ipynb`
 
 ### 5. Oportunidades e Recomendação
 
