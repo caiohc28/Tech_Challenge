@@ -80,12 +80,12 @@ Análise dos meios de pagamento, parcelamento, comportamento de compra e recompr
 
 Principais resultados documentados:
 
-O cartão de crédito (credit_card) é o método mais utilizado, com mais de 76 mil transações. O boleto vem em segundo lugar, com cerca de 19,7 mil transações. Voucher e cartão de débito (debit_card) aparecem na sequência. A distribuição de meios de pagamento comporta-se com dominância expressiva do Cartão de Crédito (73.92%), seguido pelo Boleto (19.04%), Voucher (5.56%) e Cartão de Débito (1.47%).
-O Ticket Médio por Número de Parcelas flutua à medida que o número de parcelas aumenta, evidenciando picos característicos de compras de alto valor parceladas em 10, 15, 20 ou 24 vezes no cartão de crédito. O cálculo da correlação de Pearson foi de 0.33 e a Correlação de Spearman foi de 0,41. No gráfico de dispersão com a linha de tendência (vermelha), percebe-se claramente que compras de maior valor (especialmente acima de R$ 1.000) tendem a se concentrar em números maiores de parcelas (como 10 parcelas). Compras de menor valor ocorrem em qualquer quantidade de parcelas, mas compras de maior valor quase nunca são feitas em poucas parcelas. Portanto, sim, há uma correlação positiva moderada: quanto maior o valor da compra, mais os clientes tendem a parcelar.
-RFM: Recência: Mediana de 224 dias sem novas compras, com picos relevantes próximos a 280 dias;
+- O cartão de crédito (credit_card) é o método mais utilizado, com mais de 76 mil transações. O boleto vem em segundo lugar, com cerca de 19,7 mil transações. Voucher e cartão de débito (debit_card) aparecem na sequência. A distribuição de meios de pagamento comporta-se com dominância expressiva do Cartão de Crédito (73.92%), seguido pelo Boleto (19.04%), Voucher (5.56%) e Cartão de Débito (1.47%).
+- O Ticket Médio por Número de Parcelas flutua à medida que o número de parcelas aumenta, evidenciando picos característicos de compras de alto valor parceladas em 10, 15, 20 ou 24 vezes no cartão de crédito. Compras de menor valor ocorrem em qualquer quantidade de parcelas, mas compras de maior valor quase nunca são feitas em poucas parcelas. Portanto, sim, há uma correlação positiva moderada: quanto maior o valor da compra, mais os clientes tendem a parcelar.
+- RFM: Recência: Mediana de 224 dias sem novas compras, com picos relevantes próximos a 280 dias;
 Frequência: Extremamente transacional. A imensa maioria dos clientes possui frequência igual a 1.
 Monetização: O ticket acumulado por cliente concentra-se fortemente entre R$ 50,00 e R$$ 50,00 e R$ 150,00, com queda exponencial suave para valores maiores.
-Recompra e retenção por coorte: o modelo atual da Olist é altamente dependente da aquisição constante de novos clientes (CAC), já que 94% do faturamento vem de quem compra apenas uma vez.
+- Recompra e retenção por coorte: o modelo atual da Olist é altamente dependente da aquisição constante de novos clientes (CAC), já que 94% do faturamento vem de quem compra apenas uma vez.
 
 Notebook: `notebooks/Olist_Crescimento_Receita.ipynb`
 
