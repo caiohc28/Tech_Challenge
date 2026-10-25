@@ -92,9 +92,6 @@ Notebook: `notebooks/Olist_Crescimento_Receita.ipynb`
 ### 4. Satisfação do Cliente
 
 **Responsável:** Ana Carolina Queiroz
-### 4. Satisfação do Cliente
-
-**Responsável:** Ana Carolina Queiroz
 
 Análise dos fatores que mais influenciam a nota de avaliação dos clientes: distribuição das notas, atraso na entrega, categoria do produto, comentários e tempo de aprovação do pedido.
 
