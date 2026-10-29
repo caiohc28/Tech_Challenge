@@ -68,9 +68,19 @@ Notebook: `notebooks/Olist_Crescimento_Receita.ipynb`
 
 **Responsável:** Caio Carnetti
 
-Análise dos prazos de entrega, atrasos, cumprimento do SLA e relação entre desempenho logístico e avaliações dos clientes.
+Análise do cumprimento dos prazos de entrega (OTD), tempo por etapa logística, diferenças regionais e oportunidades de melhoria operacional.
 
-**Status:** Em desenvolvimento.
+Principais resultados documentados:
+- 93,2% dos pedidos foram entregues até a data prometida, enquanto 6,8% apresentaram atrasos.
+- Os pedidos atrasados tiveram atraso médio de aproximadamente 10,6 dias.
+- O transporte representa aproximadamente 79,2% da soma das medianas das etapas logísticas analisadas.
+- O tempo mediano de transporte foi de 7,1 dias, enquanto o percentil 90 (P90) chegou a 18,9 dias.
+- A postagem pelo vendedor apresentou mediana de 1,8 dia e P90 de 6,0 dias.
+- O Nordeste registrou o menor índice regional de entregas no prazo (87,1%), seguido pelo Norte (91,4%).
+- O Norte apresentou o maior prazo típico de entrega entre as regiões analisadas, com mediana de 20,2 dias.
+- Os resultados indicam oportunidades de melhoria na previsibilidade das entregas, no monitoramento de atrasos e na investigação de gargalos por região e etapa logística.
+
+Notebook: `notebooks/Logistica_SLA.ipynb`
 
 ### 3. Comportamento e Pagamentos
 
@@ -172,7 +182,7 @@ Arquivos utilizados na trilha de Oportunidades e Recomendação:
 | Etapa | Status |
 |---|---|
 | Crescimento e Receita | Concluído |
-| Logística e SLA | Em desenvolvimento |
+| Logística e SLA | Concluído |
 | Comportamento e Pagamentos | Em desenvolvimento |
 | Satisfação do Cliente | Concluído |
 | Oportunidades e Recomendação | Concluído |
