@@ -32,7 +32,7 @@ Principais tabelas:
 - `product_category_name_translation`
 
 **Fonte:** Olist / Kaggle  
-**Dataset:** [Adicionar link utilizado pelo grupo]
+**Dataset:** [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
 ## Equipe
 
@@ -89,7 +89,6 @@ Notebook: `notebooks/Logistica_SLA.ipynb`
 Análise dos meios de pagamento, parcelamento, comportamento de compra e recompra dos clientes.
 
 Principais resultados documentados:
-
 - O cartão de crédito (credit_card) é o método mais utilizado, com mais de 76 mil transações. O boleto vem em segundo lugar, com cerca de 19,7 mil transações. Voucher e cartão de débito (debit_card) aparecem na sequência. A distribuição de meios de pagamento comporta-se com dominância expressiva do Cartão de Crédito (73.92%), seguido pelo Boleto (19.04%), Voucher (5.56%) e Cartão de Débito (1.47%).
 - O Ticket Médio por Número de Parcelas flutua à medida que o número de parcelas aumenta, evidenciando picos característicos de compras de alto valor parceladas em 10, 15, 20 ou 24 vezes no cartão de crédito. Compras de menor valor ocorrem em qualquer quantidade de parcelas, mas compras de maior valor quase nunca são feitas em poucas parcelas. Portanto, sim, há uma correlação positiva moderada: quanto maior o valor da compra, mais os clientes tendem a parcelar.
 - RFM: a Recência tem mediana de 224 dias sem novas compras, com picos relevantes próximos a 280 dias. A Frequência tem a maioria dos clientes possui frequência igual a 1. A monetização com ticket acumulado por cliente sendo que concentra-se fortemente entre R$ 50,00 e R$ 150,00, com queda exponencial suave para valores maiores.
@@ -127,8 +126,6 @@ Principais resultados documentados:
 
 Notebook: `notebooks/Oportunidades_e_Recomendacao.ipynb`
 
-**Status:** Concluído.
-
 ## Como executar os notebooks
 
 1. Abra o notebook desejado no Google Colab.
@@ -144,12 +141,11 @@ Arquivos utilizados na trilha de Crescimento e Receita:
 - `olist_customers_dataset.csv`
 - `product_category_name_translation.csv`
 
-Arquivos utilizados na trilha de Comportamento e Pagamentos
+Arquivos utilizados na trilha de Comportamento e Pagamentos:
 
 - `olist_customers_dataset.csv`
 - `olist_orders_dataset.csv`
 - `olist_order_payments_dataset.csv`
-
 
 Arquivos utilizados na trilha de Satisfação do Cliente:
 
@@ -183,12 +179,12 @@ Arquivos utilizados na trilha de Oportunidades e Recomendação:
 |---|---|
 | Crescimento e Receita | Concluído |
 | Logística e SLA | Concluído |
-| Comportamento e Pagamentos | Em desenvolvimento |
+| Comportamento e Pagamentos | Concluído |
 | Satisfação do Cliente | Concluído |
 | Oportunidades e Recomendação | Concluído |
-| Relatório final | Em desenvolvimento |
-| Apresentação final | Em desenvolvimento |
-| Vídeo executivo | Em desenvolvimento |
+| Relatório final | Concluído |
+| Apresentação final | Concluído |
+| Vídeo executivo | Concluído |
 
 ---
 
